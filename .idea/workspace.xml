@@ -26,7 +26,7 @@
       <file leaf-file-name="core.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Config/core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="201" column="31" selection-start="7751" selection-end="7761" vertical-scroll-proportion="0.2320819" vertical-offset="2958" max-vertical-offset="5695">
+            <state line="201" column="69" selection-start="7789" selection-end="7789" vertical-scroll-proportion="0.2320819" vertical-offset="2958" max-vertical-offset="5695">
               <folding />
             </state>
           </provider>
@@ -196,7 +196,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Config/core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="31" selection-start="7751" selection-end="7761" vertical-scroll-proportion="0.2320819" vertical-offset="2958" max-vertical-offset="5695">
+        <state line="201" column="69" selection-start="7789" selection-end="7789" vertical-scroll-proportion="0.2320819" vertical-offset="2958" max-vertical-offset="5695">
           <folding />
         </state>
       </provider>
