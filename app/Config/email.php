@@ -44,6 +44,15 @@ class EmailConfig {
 		//'headerCharset' => 'utf-8',
 	);
 
+    public $gmail = array(
+        'host' => 'ssl://smtp.gmail.com',
+        'port' => '465',
+        'auth' => true,
+        'username' => 'dekogha@gmail.com',
+        'password' => 'sullivan@2014',
+        'transport' => 'Smtp'
+    );
+
 	public $smtp = array(
 		'transport' => 'Smtp',
 		'from' => array('site@localhost' => 'My Site'),
