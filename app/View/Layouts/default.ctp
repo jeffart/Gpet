@@ -63,7 +63,9 @@
 
     <div class="container">
 
-       <?= $this->fetch('content'); ?>
+        <?= $this->Session->flash(); ?>
+        <?= $this->Session->flash('auth'); ?>
+        <?= $this->fetch('content'); ?>
 
     </div> <!-- /container -->
 
