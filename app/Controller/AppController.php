@@ -36,8 +36,13 @@ class AppController extends Controller {
     public $components = array(
         'Session',
         'Cookie',
-        'Auth'
-
+        'Auth' => array(
+            'authenticate' => array(
+                'Form' => array(
+                    'scope' => array('User.active' => 1)
+                )
+            )
+        )
     );
 
 }
