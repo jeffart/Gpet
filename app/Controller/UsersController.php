@@ -25,7 +25,7 @@ class UsersController extends AppController{
                 ));
                 $this->User->save(); // on sauvegarde les données en base
 
-                // on se charge de l'envoie du mail
+                // on se charge ici de l'envoie du mail
 
                 App::uses('CakeEmail', 'Network/Email'); // on charge cakeemail
                 $CakeEmail = new CakeEmail('gmail');  // on cree un nouvel objet
