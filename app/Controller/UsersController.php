@@ -5,7 +5,7 @@ class UsersController extends AppController{
 
     public function beforeFilter(){
         parent::beforeFilter();
-        $this->Auth->allow('signup','login','activate');
+        $this->Auth->allow('signup','login','activate','forgot','password');
     }
 
 // fonction de connxion à l'application
@@ -20,6 +20,16 @@ class UsersController extends AppController{
             }
         }
     }
+
+
+    // fonction de deconnxion à l'application
+
+    public function logout(){
+        $this->Auth->logout();
+        return $this->redirect('/'); // rediriger l'user vers la page d'accueil.
+    }
+
+
 
 
 
@@ -95,7 +105,77 @@ class UsersController extends AppController{
     }
 
 
+    /**
+     * Permet de regénérer un mot de passe pour un utilisateur
+     */
 
+
+
+    public function forgot(){  // permet de regenerer un mot de pass et l'envoyer a l'utilisateur
+        if (!empty($this->request->data)) {  // si des donnees sont postées
+
+            // on recupere l'id de 'utilistaeur auquel est associé le mail et on le met dans la variable$user
+            $user = $this->User->findByMail($this->request->data['User']['mail'], array('id'));
+            if(empty($user)){ // si c 'est vide
+                $this->Session->setFlash("Ce email n'est associé a aucun compte","flash", array('class' => 'error'));
+            }else{// sinon
+
+              //  debug($user);
+
+                $token = md5(uniqid().time());
+                $this->User->id = $user['User']['id'];
+                $this->User->saveField('token', $token);
+
+                App::uses('CakeEmail', 'Network/Email');
+                $cakeMail = new CakeEmail('gmail');
+                $cakeMail->from('dekogha@gmail.com');
+                $cakeMail->to($this->request->data['User']['mail']);
+                $cakeMail->subject('Régénération de mot de passe');
+                $cakeMail->template('password');
+                $cakeMail->viewVars(array('token' => $token, 'id' => $user['User']['id']));
+                $cakeMail->emailFormat('text');
+                $cakeMail->send();
+
+                $this->Session->setFlash("Un email vous a été envoyé avec les instructions pour regénérer votre mot de passe","flash", array('class' => 'success'));
+
+
+                }
+        }
+    }
+
+    // Formulaire de saisi du nouveau mot de passe
+
+    public function password($user_id, $token){  // cette fonction prend  2 parametres
+        // on recherche le premier utilisateur dont id et le token corespondent aux valeur passe en parametres
+        $user = $this->User->find('first', array(
+            'fields'     => array('id'),
+            'conditions' => array('id' => $user_id, 'token' => $token)
+        ));
+        // si on ne trouve pas d'utilistaeur c est que le lien de validation n'est pas bon
+        if (empty($user)) {
+            $this->Session->setFlash('Ce lien ne semble pas bon');
+            return $this->redirect(array('action' => 'forgot')); // on est rediriger vers la page forgot
+        }
+
+        // si on  trouve l'utilistaeur c est que le lien de validation est  bon
+        if(!empty($this->request->data)){
+            $this->User->create($this->request->data);
+            if($this->User->validates()){   // on valide les données passw et password2
+                $this->User->create();
+
+                // on enregistre le mot de passe
+                $this->User->save(array(
+                    'id' => $user['User']['id'],
+                    'token' => '',// on vide le champs token
+                    'active' => 1, // on force le active à 1
+                    'password' => $this->Auth->password($this->request->data['User']['password'])
+                ));
+                // on affiche message ...  on utilise le template flash et la class success
+                $this->Session->setFlash("Votre mot de passe a bien été modifié","flash", array('class' => 'success'));
+                return $this->redirect(array('action' => 'login')); // on redirige l'utilisateur vers la page de login
+            }
+        }
+    }
 
 
 
