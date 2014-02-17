@@ -26,16 +26,25 @@
       <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="5" selection-start="1012" selection-end="1012" vertical-scroll-proportion="-23.538462" vertical-offset="0" max-vertical-offset="765">
+            <state line="61" column="5" selection-start="1823" selection-end="1823" vertical-scroll-proportion="-21.5" vertical-offset="478" max-vertical-offset="1190">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UsersController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="74" selection-start="236" selection-end="236" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="3196">
+            <state line="53" column="0" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.58965516" vertical-offset="559" max-vertical-offset="3808">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Users/account.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="46" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -86,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="6" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.8853288" vertical-offset="240" max-vertical-offset="918">
+            <state line="48" column="0" selection-start="1405" selection-end="1405" vertical-scroll-proportion="-22.153847" vertical-offset="240" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -112,11 +121,12 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Config/email.php" />
         <option value="$PROJECT_DIR$/app/Config/database.php" />
-        <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/app/View/Emails/text/signup.ctp" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
-        <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/View/Users/account.ctp" />
+        <option value="$PROJECT_DIR$/app/Model/User.php" />
       </list>
     </option>
   </component>
@@ -405,8 +415,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Ampps\www\Gpet\app\View\Emails\text" />
       <recent name="C:\Ampps\www\Gpet\app\View\Users" />
+      <recent name="C:\Ampps\www\Gpet\app\View\Emails\text" />
       <recent name="C:\Ampps\www\Gpet\app\View\Elements" />
       <recent name="C:\Ampps\www\Gpet\app\View\Layouts\Emails\text" />
       <recent name="C:\Ampps\www\Gpet\app\View\Layouts\Emails\html" />
@@ -544,13 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="5" selection-start="1012" selection-end="1012" vertical-scroll-proportion="-23.538462" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Emails/text/signup.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
@@ -600,16 +603,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="74" selection-start="236" selection-end="236" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="3196">
+        <state line="48" column="0" selection-start="1405" selection-end="1405" vertical-scroll-proportion="-22.153847" vertical-offset="240" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+    <entry file="file://$PROJECT_DIR$/app/View/Users/account.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="6" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.8853288" vertical-offset="240" max-vertical-offset="918">
+        <state line="7" column="46" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="5" selection-start="1823" selection-end="1823" vertical-scroll-proportion="-21.5" vertical-offset="478" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.58965516" vertical-offset="559" max-vertical-offset="3808">
           <folding />
         </state>
       </provider>

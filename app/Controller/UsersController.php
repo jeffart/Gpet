@@ -30,6 +30,42 @@ class UsersController extends AppController{
     }
 
 
+ // fonction de connexion au compte .
+ // pas besoin de la metre dans le this auth allow car la page est limité al'acces des membres.
+
+    public function account(){
+        if (!empty($this->request->data)) {  // si des données sont postées
+            $this->request->data['User']['id'] = $this->Auth->user('id'); // empeche les utilisateur de creer un faux champs id
+            $this->User->create($this->request->data); // on enregistre les données
+            if($this->User->validates()){ // on valide les donneés
+                $this->User->create(); //
+
+                // si la validation est ok on sauvegarde les données
+                // on precise les champs qui peuvent etre modifiés
+                $this->User->save($this->request->data, true, array('firstname','lastname'));
+
+                if(!empty($this->request->data['User']['avatarf']['tmp_name'])){
+                    $directory = IMAGES . 'avatars' . DS . ceil($this->User->id / 1000);
+                    if(!file_exists($directory))
+                        mkdir($directory, 0777);
+                    move_uploaded_file($this->request->data['User']['avatarf']['tmp_name'], $directory . DS . $this->User->id . '.jpg');
+                    $this->User->saveField('avatar', 1);
+                }
+
+                $user = $this->User->read();
+                $this->Auth->login($user['User']);
+
+                $this->Session->setFlash("Vos informations ont bien été modifiées","flash", array('class' => 'success'));
+            }
+        }else{ // si aucune infos n'est poste . on lit le information de la base de données. ici fourni par le this request data
+            $this->User->id = $this->Auth->user('id');
+            $this->request->data = $this->User->read();
+        }
+    }
+
+
+
+
 
 
 

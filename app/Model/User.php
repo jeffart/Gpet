@@ -28,12 +28,37 @@ class User extends AppModel{
             'rule' => 'identicalFields',
             'required' => false,
         ),
+        'avatarf' => array(
+            'rule' => 'isJpg',
+            'message' => 'Vous devez envoyer un jpg'
+        )
     );
 
 
     public function identicalFields($check, $limit){
         $field = key($check);
         return $check[$field] == $this->data['User']['password'];
+    }
+
+    public function isJpg($check, $limit){
+        $field = key($check);
+        $filename = $check[$field]['name'];
+        if(empty($filename)){
+            return true;
+        }
+        $info = pathinfo($filename);
+        return strtolower($info['extension']) == 'jpg';
+    }
+
+
+
+    public function afterFind($results, $primary = false){
+        foreach($results as $k=>$result){
+            if(isset($result[$this->alias]['avatar']) && isset($result[$this->alias]['id'])){
+                $results[$k][$this->alias]['avatari'] = 'avatars/' . ceil($result[$this->alias]['id']/1000) . '/' . $result[$this->alias]['id'] . '.jpg';
+            }
+        }
+        return $results;
     }
 
 
