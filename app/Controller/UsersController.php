@@ -48,6 +48,7 @@ class UsersController extends AppController{
 
                 $this->Session->setFlash('Merci vous êtes inscrit');
             }else{
+                //specification du type de message grace  mot clé class
                 $this->Session->setFlash('Merci de corriger vos erreurs', 'flash', array('class' => 'error'));
             }
         }
