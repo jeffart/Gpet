@@ -32,19 +32,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UsersController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="35" selection-start="1120" selection-end="1120" vertical-scroll-proportion="-7.8461537" vertical-offset="255" max-vertical-offset="1190">
+            <state line="7" column="54" selection-start="216" selection-end="216" vertical-scroll-proportion="0.20517242" vertical-offset="0" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.ctp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="signup.ctp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/Emails/text/signup.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="0.17586207" vertical-offset="0" max-vertical-offset="580">
+            <state line="6" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
         <option value="$PROJECT_DIR$/app/View/Emails/text/signup.ctp" />
+        <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
       </list>
     </option>
   </component>
@@ -534,16 +534,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
+    <entry file="file://$PROJECT_DIR$/app/View/Emails/text/signup.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="35" selection-start="1120" selection-end="1120" vertical-scroll-proportion="-7.8461537" vertical-offset="255" max-vertical-offset="1190">
+        <state line="6" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Emails/text/signup.ctp">
+    <entry file="file://$PROJECT_DIR$/app/Controller/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="0.17586207" vertical-offset="0" max-vertical-offset="580">
+        <state line="7" column="54" selection-start="216" selection-end="216" vertical-scroll-proportion="0.20517242" vertical-offset="0" max-vertical-offset="1598">
           <folding />
         </state>
       </provider>
