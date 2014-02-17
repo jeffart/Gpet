@@ -61,7 +61,7 @@ class DATABASE_CONFIG {
         'host' => 'localhost',
         'login' => 'petsy',
         'password' => 'petsy',
-        'database' => 'petsy',
+        'database' => 'petsy2',
         'prefix' => '',
         //'encoding' => 'utf8',
     );
