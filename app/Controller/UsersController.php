@@ -8,6 +8,19 @@ class UsersController extends AppController{
         $this->Auth->allow('signup','login','activate');
     }
 
+// fonction de connxion à l'application
+
+    public function login(){
+        if (!empty($this->request->data)) {  // on verifie si des données ont été poste
+
+            if ($this->Auth->login()) {  // si on arrive à connecter l'utilisateur message de succes
+                $this->Session->setFlash("Vous êtes maintenant connecté","flash", array('class' => 'success'));
+            }else{  // sinon message identifiant pas correct
+                $this->Session->setFlash("Identifiants incorrects","flash", array('class' => 'error'));
+            }
+        }
+    }
+
 
 
     public function signup(){

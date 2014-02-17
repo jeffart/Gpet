@@ -54,7 +54,18 @@
               </li>
             </ul>
             <!--nocache-->
-
+              <?php if ($this->Session->read('Auth.User.id')): ?>
+                  <ul class="nav pull-right">
+                      <li><?= $this->Html->link('Mon compte', array('controller' => 'users', 'action' => 'account')); ?></li>
+                      <li><?= $this->Html->link('Se déconnecter', array('controller' => 'users', 'action' => 'logout')); ?></li>
+                  </ul>
+              <?php else: ?>
+                  <?= $this->Form->create('User', array('class' => 'navbar-form pull-right', 'action' => 'login')); ?>
+                  <?= $this->Form->input('username', array('label' => false, 'div' => false, 'placeholder' => "Nom d'utilisateur", "class" => "span2")); ?>
+                  <?= $this->Form->input('password', array('label' => false, 'div' => false, 'placeholder' => "Mot de passe", "class" => "span2")); ?>
+                  <button type="submit" class="btn">Se connecter</button>
+                  <?= $this->Form->end(); ?>
+              <?php endif ?>
             <!--/nocache-->
           </div><!--/.nav-collapse -->
         </div>
