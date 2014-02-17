@@ -50,7 +50,9 @@ class User extends AppModel{
         return strtolower($info['extension']) == 'jpg';
     }
 
-
+// petite presistion cette fonction doit etre creer pour trouver l'avatar de l'utilisateur
+// pour afficher cette avatar dans le compte user
+// elle doit etre creer apres le formulaire acoount parti qui affiche la photo
 
     public function afterFind($results, $primary = false){
         foreach($results as $k=>$result){
