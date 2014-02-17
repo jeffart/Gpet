@@ -71,7 +71,7 @@
       <file leaf-file-name="default.ctp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="28" selection-start="2988" selection-end="2988" vertical-scroll-proportion="0.7034483" vertical-offset="731" max-vertical-offset="1581">
+            <state line="57" column="135" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.17586207" vertical-offset="867" max-vertical-offset="1649">
               <folding />
             </state>
           </provider>
@@ -597,7 +597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="28" selection-start="2988" selection-end="2988" vertical-scroll-proportion="0.7034483" vertical-offset="731" max-vertical-offset="1581">
+        <state line="57" column="135" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.17586207" vertical-offset="867" max-vertical-offset="1649">
           <folding />
         </state>
       </provider>
