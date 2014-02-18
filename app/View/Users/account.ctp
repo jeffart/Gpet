@@ -20,7 +20,5 @@
                 <?= $this->Form->end('Modifier'); ?></div>
         </div>
     </div>
-    <div class="span4">
-
-    </div>
+    <?= $this->element('sidebar_account'); ?>
 </div>
