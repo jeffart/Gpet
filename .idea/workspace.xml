@@ -50,10 +50,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppModel.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/AppModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="42" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.46896553" vertical-offset="0" max-vertical-offset="580">
+            <state line="36" column="42" selection-start="1175" selection-end="1175" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="408">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Species.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Model/Species.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="149" selection-start="188" selection-end="188" vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="580">
               <folding />
             </state>
           </provider>
@@ -72,15 +81,6 @@
         <entry file="file://$PROJECT_DIR$/app/View/Pets/edit.ctp">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="39" selection-start="82" selection-end="82" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="408">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Pets/my.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="68" selection-start="140" selection-end="140" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -145,6 +145,7 @@
         <option value="$PROJECT_DIR$/app/Model/Pet.php" />
         <option value="$PROJECT_DIR$/app/Controller/PetsController.php" />
         <option value="$PROJECT_DIR$/app/Model/AppModel.php" />
+        <option value="$PROJECT_DIR$/app/Model/Species.php" />
       </list>
     </option>
   </component>
@@ -763,7 +764,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/AppModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="42" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.46896553" vertical-offset="0" max-vertical-offset="580">
+        <state line="36" column="42" selection-start="1175" selection-end="1175" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Species.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="149" selection-start="188" selection-end="188" vertical-scroll-proportion="0.08793104" vertical-offset="0" max-vertical-offset="580">
           <folding />
         </state>
       </provider>
