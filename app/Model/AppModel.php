@@ -35,4 +35,35 @@ class AppModel extends Model {
 
     public $recursive = -1; // on doit bloquer la recursivité vue que nous avons de association entre les modele
     public $actsAs = array('Containable');
+
+     // on definit une regle general pour la taille des avatar.
+    public function sizeimg($check, $width, $height, $limit){
+
+        //debug($check);
+        //debug($limit);
+
+        //debug(func_get_args());
+
+
+
+        $field = key($check);  // on recupere le non du champs (avatarf)
+        $value = $check[$field];  // on recupere la valeur contenu dans le champs
+        //debug($value);
+        //die();
+        if(empty($value['tmp_name'])){ // si aucune image n'est envoyer
+            return true;
+        }
+        $file =  pathinfo(strtolower($value['name'])); // on recupere le chemin du fichier et on le met en miniscule
+        //debug($file);
+        //die();
+        if(!in_array($file['extension'], array('jpg','jpeg','png'))){
+            return false;
+        } // si on trouve pas d'extension image on retourne faux
+
+        $size = getimagesize($value['tmp_name']);  // on recupere la taille de l'image
+
+        //debug($size);
+        //die();
+        return $size[0] > $width && $size[1] > $height;
+    }
 }
