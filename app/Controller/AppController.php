@@ -45,4 +45,18 @@ class AppController extends Controller {
         )
     );
 
+    public function beforeFilter(){
+        parent::beforeFilter();
+        if(isset($this->request->params['prefix']) && $this->request->params['prefix'] == 'admin'){
+            if($this->Auth->user('role') != 'admin'){
+                throw new NotFoundException();
+            }
+        }
+
+    }
+
+
+
+
+
 }

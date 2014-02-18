@@ -58,8 +58,8 @@
               <!-- Si on arrive à lire des donnéees de session ce qui veut dire si un utilisateur est connecter , on affiche les bouton -->
               <?php if ($this->Session->read('Auth.User.id')): ?>
                   <ul class="nav pull-right">
-                      <li><?= $this->Html->link('Mon compte', array('controller' => 'users', 'action' => 'account')); ?></li>
-                      <li><?= $this->Html->link('Se déconnecter', array('controller' => 'users', 'action' => 'logout')); ?></li>
+                      <li><?= $this->Html->link('Mon compte', array('controller' => 'users', 'action' => 'account', 'admin' => false)); ?></li>
+                      <li><?= $this->Html->link('Se déconnecter', array('controller' => 'users', 'action' => 'logout', 'admin' => false)); ?></li>
                   </ul>
               <?php else: ?>
                   <!-- Si aucunes  donnéees de session ce qui veut dire si un utilisateur non connecter , on affiche le formulaire de connexion -->
