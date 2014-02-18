@@ -61,4 +61,17 @@ class Pet extends AppModel{
         }
     }
 
+    // cette fonction va nous permettre de gerer la suppresion des images des avatar si jamais l'utilisateur supprme un animal.
+
+    public function beforeDelete($cascade = true){   // avant la suppression
+        $pet = $this->read('avatar,id');    // on recupere les donnés
+
+        //debug($pet);
+        //die();
+        if(isset($pet[$this->alias]['avatari'])){  // si on a avatari (voir //debug($pet);)
+            unlink(IMAGES . $pet[$this->alias]['avatari']); // on supprime le fichier
+        }
+        return true;
+    }
+
 }

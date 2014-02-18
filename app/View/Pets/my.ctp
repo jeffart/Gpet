@@ -23,7 +23,7 @@
             <?php foreach ($pets as $k => $pet): ?>
                 <tr>
 
-                    <td><?= $this->Html->image($pet['Pet']['avatari'], array('width' => 50, 'class' => 'img-circle')); ?></td>
+                    <td><?= $this->Html->image($pet['Pet']['avatari']. '?' . rand(), array('width' => 50, 'class' => 'img-circle')); ?></td>
 
                     <td><?= $pet['Pet']['name']; ?></td>
                     <td><?= $pet['Pet']['gender']; ?></td>
@@ -46,5 +46,5 @@
 
 
     </div>
-
+    <?= $this->element('sidebar_account'); ?>
 </div>
