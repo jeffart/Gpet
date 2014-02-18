@@ -12,6 +12,7 @@
                 'F' => 'Femelle'
             ))); ?>
             <?= $this->Form->input('species_id', array('label' => 'Animal')); ?>
+        <!-- petite precision sur la date de naissance  on definit une annéé minimale et un année maximale-->
             <?= $this->Form->input('birthday', array('label' => 'Date de naissance', 'minYear' => date('Y') - 70, 'maxYear' => date('Y'))); ?>
         <?= $this->Form->end('Envoyer'); ?>
     </div>
