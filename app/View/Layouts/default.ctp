@@ -37,6 +37,11 @@
           <?= $this->Html->link('Petsy', '/', array('class' => 'brand')); ?>
           <div class="nav-collapse collapse">
             <ul class="nav">
+                <!--nocache-->
+                <?php if ($this->Session->read('Auth.User.role') == 'admin'): ?>
+                    <li><?= $this->Html->link('Espèces', '/admin/species'); ?></li>
+                <?php endif ?>
+                <!--/nocache-->
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
