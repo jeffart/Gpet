@@ -1,6 +1,7 @@
 <div class="row">
     <div class="span8">
         <h1>Mes animaux</h1>
+        <!-- WR-->
 
         <!-- On affiche un lien qui permet d'ajouter un novel animal-->
 
