@@ -32,4 +32,7 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+    public $recursive = -1; // on doit bloquer la recursivité vue que nous avons de association entre les modele
+    public $actsAs = array('Containable');
 }
