@@ -11,7 +11,7 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-
+                <th> </th>
                 <th>Nom</th>
                 <th>Sexe</th>
                 <th>Age</th>
@@ -22,7 +22,10 @@
             <tbody>
             <?php foreach ($pets as $k => $pet): ?>
                 <tr>
-                      <td><?= $pet['Pet']['name']; ?></td>
+
+                    <td><?= $this->Html->image($pet['Pet']['avatari'], array('width' => 50, 'class' => 'img-circle')); ?></td>
+
+                    <td><?= $pet['Pet']['name']; ?></td>
                     <td><?= $pet['Pet']['gender']; ?></td>
                     <td>
                         <?php

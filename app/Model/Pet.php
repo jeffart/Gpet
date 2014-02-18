@@ -12,6 +12,19 @@ class Pet extends AppModel{
         )
     );
 
+    // petite presistion cette fonction doit etre creer pour trouver l'avatar de l'animal
+// pour afficher cette avatar dans le compte user
+
+
+    public function afterFind($results, $primary = false){
+        foreach($results as $k=>$result){
+            if(isset($result[$this->alias]['avatar']) && isset($result[$this->alias]['id'])){
+                $results[$k][$this->alias]['avatari'] = 'pets/' . ceil($result[$this->alias]['id']/1000) . '/' . $result[$this->alias]['id'] . '.jpg';
+            }
+        }
+        return $results;
+    }
+
     public function afterSave($created){
         // Upload de l'avatar de l'animal
 
