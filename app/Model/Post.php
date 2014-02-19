@@ -36,6 +36,8 @@ class Post extends AppModel{
             if(isset($result[$this->alias]['id'])){
                 $results[$k][$this->alias]['photo'] = 'photos/' . ceil($result[$this->alias]['id']/1000) . '/' . $result[$this->alias]['id'] . '.jpg';
                 $results[$k][$this->alias]['thumb'] = 'photos/' . ceil($result[$this->alias]['id']/1000) . '/' . $result[$this->alias]['id'] . '_thumb.jpg';
+                // si on a une id de definit
+                $results[$k][$this->alias]['url'] = array('controller' => 'posts', 'action' => 'view', $result[$this->alias]['id']);
 
             }
         }

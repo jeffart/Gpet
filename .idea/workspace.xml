@@ -35,10 +35,8 @@
       <file leaf-file-name="PostsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="74" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.64827585" vertical-offset="168" max-vertical-offset="765">
-              <folding>
-                <element signature="n#edit#0;n#PostsController#0;n#!!top" expanded="false" />
-              </folding>
+            <state line="7" column="70" selection-start="305" selection-end="305" vertical-scroll-proportion="0.11724138" vertical-offset="51" max-vertical-offset="1717">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,7 +53,7 @@
       <file leaf-file-name="pet.ctp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/Posts/pet.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="39" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-17.73077" vertical-offset="134" max-vertical-offset="748">
+            <state line="31" column="44" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-16.346153" vertical-offset="102" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -64,7 +62,7 @@
       <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="70" selection-start="617" selection-end="617" vertical-scroll-proportion="-8.576923" vertical-offset="32" max-vertical-offset="1887">
+            <state line="38" column="44" selection-start="1533" selection-end="1533" vertical-scroll-proportion="-13.807693" vertical-offset="287" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
@@ -146,20 +144,20 @@
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/app/Model/AppModel.php" />
-        <option value="$PROJECT_DIR$/app/Model/Post.php" />
         <option value="$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp" />
         <option value="$PROJECT_DIR$/app/View/Posts/edit.ctp" />
         <option value="$PROJECT_DIR$/app/View/Pets/my.ctp" />
         <option value="$PROJECT_DIR$/app/Model/PetsPost.php" />
-        <option value="$PROJECT_DIR$/app/View/Posts/pet.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
+        <option value="$PROJECT_DIR$/app/Model/Post.php" />
+        <option value="$PROJECT_DIR$/app/View/Posts/pet.ctp" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="84" />
-    <option name="y" value="23" />
+    <option name="x" value="49" />
+    <option name="y" value="8" />
     <option name="width" value="980" />
     <option name="height" value="768" />
   </component>
@@ -575,7 +573,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="84" y="23" width="980" height="768" extended-state="0" />
+    <frame x="49" y="8" width="980" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -830,13 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="70" selection-start="617" selection-end="617" vertical-scroll-proportion="-8.576923" vertical-offset="32" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="35" selection-start="216" selection-end="216" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="476">
@@ -879,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/pet.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="39" selection-start="1158" selection-end="1158" vertical-scroll-proportion="-17.73077" vertical-offset="134" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/PetsPost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="86" selection-start="126" selection-end="126" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="187">
@@ -893,12 +877,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="44" selection-start="1533" selection-end="1533" vertical-scroll-proportion="-13.807693" vertical-offset="287" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/pet.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="44" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-16.346153" vertical-offset="102" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="74" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.64827585" vertical-offset="168" max-vertical-offset="765">
-          <folding>
-            <element signature="n#edit#0;n#PostsController#0;n#!!top" expanded="false" />
-          </folding>
+        <state line="7" column="70" selection-start="305" selection-end="305" vertical-scroll-proportion="0.11724138" vertical-offset="51" max-vertical-offset="1717">
+          <folding />
         </state>
       </provider>
     </entry>

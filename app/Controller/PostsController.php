@@ -4,7 +4,7 @@ class PostsController extends AppController{
 
     public $paginate = array(
         'PetsPost' => array(
-            'limit' => 1,
+            'limit' => 9,  // pour une pagination sur tois colones et trois lignes
             'contain' => array('Post.id', 'Post.name', 'Post.content')
         )
     );
