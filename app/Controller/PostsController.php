@@ -30,6 +30,9 @@ class PostsController extends AppController{
             }
             // on definit le user_id de la table post qui est ici l'id de lutilisateur
             $this->request->data['Post']['user_id'] = $this->Auth->user('id');
+             //debug($this->request->data);
+            //die();
+
             if($this->Post->saveAll($this->request->data)){ // on sauvegarde les données et si les donnees sont bien sauvegardé
                 $post = $this->Post->read(); // on lit les données
 
@@ -38,6 +41,17 @@ class PostsController extends AppController{
                 // et on est redirigé vers
                 return $this->redirect(array('action'=>'my'));
             }
+        }else if($id){
+            $this->request->data = $post;
+            // on creer et on charge un sousmodel basé sur la table pets_posts
+            //cela nou permetra de recuperer les donné dans la select box au niveau de la
+            // vue edit
+            $this->loadModel('PetsPost');
+            $this->request->data['Pet']['Pet'] = $this->PetsPost->find('list', array(
+                'fields' => array('pet_id', 'pet_id'),
+                'conditions' => array('post_id' => $post['Post']['id']) // on ne recupere que les element ou l'article correspond a l'id
+            ));
+
         }
 
 
