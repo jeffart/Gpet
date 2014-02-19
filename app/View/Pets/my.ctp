@@ -36,6 +36,8 @@
                     </td>
                     <td><?= $pet['Species']['name']; ?></td>
                     <td>
+                        <?= $this->Html->link('Voir les photos', array('controller' => 'posts', 'action' => 'pet', $pet['Pet']['id'])); ?>
+                        -
                         <?= $this->Html->link('Editer', array('action' => 'edit', $pet['Pet']['id'])); ?>
                         -
                         <?= $this->Form->postLink('Supprimer', array('action' => 'delete', $pet['Pet']['id']), array(), 'Voulez vous vraiment supprimer ?'); ?>

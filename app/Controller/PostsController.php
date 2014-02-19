@@ -2,10 +2,38 @@
 App::uses('AppController','Controller');
 class PostsController extends AppController{
 
+    public $paginate = array(
+        'PetsPost' => array(
+            'limit' => 1,
+            'contain' => array('Post.id', 'Post.name', 'Post.content')
+        )
+    );
+
+    public function beforeFilter(){
+        parent::beforeFilter();
+        $this->Auth->allow('pet');
+    }
+
     // function pour afficher les photos
    public function my() {
 
    }
+
+  // cette fonction peut etre en acces pour tout le monde donc creer une methode beforefilter.
+    public function pet($id){ // reçoit en argument l'id de l'animal a voir
+        // on dit ici que notre post-pet va egalement contenir le nom de l'espece
+        $this->Post->Pet->contain('Species.name');
+        $pet = $this->Post->Pet->findById($id); // on recupere les informations sur l'animal
+        if(empty($pet)){  //si on n'a pas d'animal
+            throw new NotFoundException(); // on renvoie vers une page notfound
+        }
+        // pour avoir toutes les imags sur un animal on se base sur la table de liaison petsposts
+        // on va donc creer ce model.
+        $this->loadModel('PetsPost');
+        // on ne recupere que les images dont l'id est passe en paramettre
+        $posts = $this->paginate('PetsPost', array('pet_id' => $id));
+        $this->set(compact('pet','posts')); // on envoie les données à la vue pet.ctp
+    }
 
     public function edit($id = null){
 
