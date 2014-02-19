@@ -16,6 +16,8 @@
             echo $birthday->diff(new DateTime('now'))->y
             ?> Ans
             <!--nocache-->
+            <!-- petite precision importante ici on envoie des infos en get dans l'url  ici notre url est de la forme (http://localhost/Gpet/posts/edit?pet=1)-->
+
             <?php if ($pet['Pet']['user_id'] == $this->Session->read('Auth.User.id')): ?>
                 , <?= $this->Html->link('Ajouter une photo', array('action' => 'edit', '?' => 'pet=' . $pet['Pet']['id'])); ?>
             <?php endif ?>

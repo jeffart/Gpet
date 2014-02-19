@@ -85,7 +85,20 @@ class PostsController extends AppController{
 
         }
 
+        //debug($this->request->query); die();
+        if ($this->request->query('pet')) {
 
+            //debug($this->request->query('pet')); die(); affiche l'id de l'animal
+            //on recupere le id des annimaux et on le met dans un tableau qui servira d'index
+            $this->request->data['Pet']['Pet'][] = $this->request->query('pet');
+
+            //debug($this->request->data['Pet']['Pet']); die(); affiche par exemple
+            //array(
+             //         (int) 0 => '1'
+             //       )
+        }
+
+        debug($this->request->data);
         // on recupere les animaux sous forme de liste . en precision ce sont les animaux de l'utilisateur actuelement logger
         $pets = $this->Post->Pet->find('list', array(
             'conditions' => array('Pet.user_id' => $this->Auth->user('id'))
@@ -112,6 +125,32 @@ class PostsController extends AppController{
         }
         // puis on envoie les données a la vue.
         $this->set(compact('post'));
+    }
+
+
+
+    public function delete($id){
+        if(!$this->request->is('post')){  // on verifie si on n'est pas en post
+            throw new NotFoundException(); // message d'erreur
+        }
+
+        // si on est en post On recupere le premier article qui par rapport à l'id de l'utilisateur
+        $post = $this->Post->find('first', array(
+            'conditions' => array('Post.user_id' => $this->Auth->user("id"), 'Post.id' => $id)
+        ));
+        // si on trouve pas d'article
+        if(empty($post)){
+            // on affiche le message
+            $this->Session->setFlash("Vous ne pouvez pas éditer cet article","flash");
+            // on est rediriger vers la page precedente
+            return $this->redirect($this->referer());
+        }
+
+        // si on trouve un article on le supprime et on affiche le message de suppression
+        $this->Session->setFlash("La photo a bien été supprimée","flash");
+        $this->Post->delete($post['Post']['id']);
+        // et on redirige vers la page d'accueil.
+        return $this->redirect('/');
     }
 
 
