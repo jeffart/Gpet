@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sidebar_account.ctp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sidebar_account.ctp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="38" selection-start="899" selection-end="899" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="442">
+            <state line="6" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.17586207" vertical-offset="0" max-vertical-offset="580">
               <folding />
             </state>
           </provider>
@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="25" selection-start="275" selection-end="275" vertical-scroll-proportion="0.23448277" vertical-offset="0" max-vertical-offset="1258">
+            <state line="15" column="70" selection-start="617" selection-end="617" vertical-scroll-proportion="-8.576923" vertical-offset="32" max-vertical-offset="1887">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="Pet.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/Pet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="5" selection-start="2905" selection-end="3433" vertical-scroll-proportion="-17.076923" vertical-offset="814" max-vertical-offset="1394">
+            <state line="14" column="1" selection-start="453" selection-end="592" vertical-scroll-proportion="-3.3461537" vertical-offset="151" max-vertical-offset="1394">
               <folding />
             </state>
           </provider>
@@ -115,13 +115,13 @@
         <option value="$PROJECT_DIR$/app/View/Users/account.ctp" />
         <option value="$PROJECT_DIR$/app/View/Pets/my.ctp" />
         <option value="$PROJECT_DIR$/app/Config/database.php" />
-        <option value="$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp" />
         <option value="$PROJECT_DIR$/app/View/Posts/edit.ctp" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
         <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/app/Model/AppModel.php" />
         <option value="$PROJECT_DIR$/app/Model/Post.php" />
+        <option value="$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp" />
       </list>
     </option>
   </component>
@@ -726,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="38" selection-start="899" selection-end="899" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Users/account.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="4" selection-start="1161" selection-end="1202" vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="493">
@@ -826,14 +819,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Pet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="5" selection-start="2905" selection-end="3433" vertical-scroll-proportion="-17.076923" vertical-offset="814" max-vertical-offset="1394">
+        <state line="14" column="1" selection-start="453" selection-end="592" vertical-scroll-proportion="-3.3461537" vertical-offset="151" max-vertical-offset="1394">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="275" selection-end="275" vertical-scroll-proportion="0.23448277" vertical-offset="0" max-vertical-offset="1258">
+        <state line="15" column="70" selection-start="617" selection-end="617" vertical-scroll-proportion="-8.576923" vertical-offset="32" max-vertical-offset="1887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.17586207" vertical-offset="0" max-vertical-offset="580">
           <folding />
         </state>
       </provider>

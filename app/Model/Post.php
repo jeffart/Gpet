@@ -6,8 +6,53 @@ class Post extends AppModel{
   // regele de validation pour l'editon et la creation des post
     public $validate = array(
         'name' => 'notEmpty',
-        'photo' => 'isJpg'
+        'photo' => array(          // 2 regle
+            'create' => array(
+                'rule' => 'forceJpg',   // on force jpg
+                'on'   => 'create'      // la regle ne s'applique qu'a la creation
+            ),
+            'update' => array(
+                'rule' => 'isJpg',
+                'on'   => 'update'   // seulement  pour le mise à jour
+            )
+        )
     );
+
+    public function forceJpg($check, $limit){
+        $field = key($check);
+        $filename = $check[$field]['name'];
+        if(empty($filename)){
+            return false;
+        }
+        $info = pathinfo($filename);
+        return strtolower($info['extension']) == 'jpg';
+    }
+
+    // petite presistion cette fonction doit etre creer pour trouver les photos d'un post
+
+
+    public function afterFind($results, $primary = false){
+        foreach($results as $k=>$result){
+            if(isset($result[$this->alias]['id'])){
+                $results[$k][$this->alias]['photo'] = 'photos/' . ceil($result[$this->alias]['id']/1000) . '/' . $result[$this->alias]['id'] . '.jpg';
+                $results[$k][$this->alias]['thumb'] = 'photos/' . ceil($result[$this->alias]['id']/1000) . '/' . $result[$this->alias]['id'] . '_thumb.jpg';
+
+            }
+        }
+        return $results;
+    }
+
+// function untilisée pour supprimmer les photos avant la suppression d'un post
+    public function beforeDelete($cascade = true){// avant la suppression
+        $post = $this->read('id'); // on recupere  l'id
+        if(isset($post[$this->alias]['photo'])){
+            unlink(IMAGES . $post[$this->alias]['photo']); // on supprime les photo
+            unlink(IMAGES . $post[$this->alias]['thumb']); // on supprime les thumbs
+
+
+        }
+        return true;
+    }
 
 
     public function afterSave($created){
@@ -57,13 +102,5 @@ class Post extends AppModel{
 
 
 
-    public function beforeDelete($cascade = true){// avant la suppression
-        $post = $this->read('id'); // on recupere  l'id
-        if(isset($post[$this->alias]['photo'])){
-            unlink(IMAGES . $post[$this->alias]['photo']); // on supprime les photo
-
-        }
-        return true;
-    }
 
 }

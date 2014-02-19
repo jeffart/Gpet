@@ -2,6 +2,10 @@
     <h2>Navigation</h2>
     <ul class="nav nav-tabs nav-stacked">
 
+        <li<?php if($this->request->controller == 'posts'): ?> class="active"<?php endif; ?>>
+            <?= $this->Html->link('Ajouter une photos', array('controller' => 'posts', 'action' => 'edit')); ?>
+        </li>
+
         <!-- si l'action c'est account on met la class acount actif et donc le lien est actif et on affiche le compte-->
 
 
@@ -14,8 +18,6 @@
             <?= $this->Html->link('Mes animaux', array('controller' => 'pets', 'action' => 'my')); ?>
         </li>
 
-        <li<?php if($this->request->controller == 'posts'): ?> class="active"<?php endif; ?>>
-            <?= $this->Html->link('Mes photos', array('controller' => 'posts', 'action' => 'my')); ?>
-        </li>
+
     </ul>
 </div>
