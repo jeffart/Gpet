@@ -40,15 +40,7 @@ class User extends AppModel{
         return $check[$field] == $this->data['User']['password'];
     }
 
-    public function isJpg($check, $limit){
-        $field = key($check);
-        $filename = $check[$field]['name'];
-        if(empty($filename)){
-            return true;
-        }
-        $info = pathinfo($filename);
-        return strtolower($info['extension']) == 'jpg';
-    }
+
 
 // petite presistion cette fonction doit etre creer pour trouver l'avatar de l'utilisateur
 // pour afficher cette avatar dans le compte user

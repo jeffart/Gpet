@@ -66,4 +66,14 @@ class AppModel extends Model {
         //die();
         return $size[0] > $width && $size[1] > $height;
     }
+
+    public function isJpg($check, $limit){
+        $field = key($check);
+        $filename = $check[$field]['name'];
+        if(empty($filename)){
+            return true;
+        }
+        $info = pathinfo($filename);
+        return strtolower($info['extension']) == 'jpg';
+    }
 }
