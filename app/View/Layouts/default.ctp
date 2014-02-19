@@ -16,6 +16,7 @@
         padding-bottom: 40px;
       }
     </style>
+      <?= $this->fetch('css'); ?>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -91,6 +92,7 @@
 
     <?= $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'); ?>
     <?= $this->Html->script('cakebootstrap'); ?>
+    <?= $this->fetch('script'); ?>
 
   </body>
 </html>

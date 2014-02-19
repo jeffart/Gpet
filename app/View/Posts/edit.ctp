@@ -13,4 +13,12 @@
         <?= $this->Form->end('Envoyer'); ?>
     </div>
 </div>
+<?php $this->Html->css('chosen', null, array('inline' => false)); ?>
+<?php $this->Html->script('chosen.jquery.min', array('inline' => false)); ?>
+<?php $this->Html->scriptStart(array('inline' => false)); ?>
+(function($){
 
+$('select').chosen();
+
+})(jQuery);
+<?php $this->Html->scriptEnd(); ?>

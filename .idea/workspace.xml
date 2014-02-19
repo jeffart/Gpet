@@ -32,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostsController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="515" selection-end="515" vertical-scroll-proportion="0.49827588" vertical-offset="0" max-vertical-offset="580">
+            <state line="17" column="16" selection-start="515" selection-end="515" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.ctp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit.ctp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/View/Posts/edit.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="13" selection-start="90" selection-end="90" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="374">
+            <state line="23" column="34" selection-start="942" selection-end="942" vertical-scroll-proportion="0.67413795" vertical-offset="0" max-vertical-offset="580">
               <folding />
             </state>
           </provider>
@@ -116,7 +116,6 @@
         <option value="$PROJECT_DIR$/app/Config/core.php" />
         <option value="$PROJECT_DIR$/app/Controller/UsersController.php" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
-        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/app/View/Species/admin_index.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/SpeciesController.php" />
         <option value="$PROJECT_DIR$/app/Model/Species.php" />
@@ -129,8 +128,9 @@
         <option value="$PROJECT_DIR$/app/Config/database.php" />
         <option value="$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp" />
         <option value="$PROJECT_DIR$/app/Model/Post.php" />
-        <option value="$PROJECT_DIR$/app/View/Posts/edit.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
+        <option value="$PROJECT_DIR$/app/View/Posts/edit.ctp" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
       </list>
     </option>
   </component>
@@ -236,6 +236,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gpet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gpet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,6 +407,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gpet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gpet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Elements" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -459,11 +503,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Ampps\www\Gpet\app\webroot\css" />
+      <recent name="C:\Ampps\www\Gpet\app\webroot\js" />
       <recent name="C:\Ampps\www\Gpet\app\Model" />
       <recent name="C:\Ampps\www\Gpet\app\View\Posts" />
       <recent name="C:\Ampps\www\Gpet\app\View" />
-      <recent name="C:\Ampps\www\Gpet\app\Controller" />
-      <recent name="C:\Ampps\www\Gpet\app\Vendor" />
     </key>
   </component>
   <component name="RunManager">
@@ -663,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="12" selection-start="2267" selection-end="2407" vertical-scroll-proportion="0.43965518" vertical-offset="816" max-vertical-offset="1734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="0" selection-start="1703" selection-end="1703" vertical-scroll-proportion="-17.576923" vertical-offset="495" max-vertical-offset="1156">
@@ -768,14 +805,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/edit.ctp">
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/my.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="90" selection-end="90" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="374">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="606">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/my.ctp">
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/chosen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="24" selection-start="101" selection-end="101" vertical-scroll-proportion="0.11221122" vertical-offset="0" max-vertical-offset="7582">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/chosen.jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="606">
           <folding />
@@ -784,7 +828,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="515" selection-end="515" vertical-scroll-proportion="0.49827588" vertical-offset="0" max-vertical-offset="580">
+        <state line="17" column="16" selection-start="515" selection-end="515" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="34" selection-start="4085" selection-end="4085" vertical-scroll-proportion="0.8206897" vertical-offset="1122" max-vertical-offset="1768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/edit.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="34" selection-start="942" selection-end="942" vertical-scroll-proportion="0.67413795" vertical-offset="0" max-vertical-offset="580">
           <folding />
         </state>
       </provider>
