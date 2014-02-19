@@ -14,10 +14,7 @@ class PostsController extends AppController{
         $this->Auth->allow('pet');
     }
 
-    // function pour afficher les photos
-   public function my() {
 
-   }
 
   // cette fonction peut etre en acces pour tout le monde donc creer une methode beforefilter.
     public function pet($id){ // reçoit en argument l'id de l'animal a voir
@@ -46,6 +43,7 @@ class PostsController extends AppController{
             ));
             if(empty($post)){ // si on ne trouve pas d'article
                 $this->Session->setFlash("Vous ne pouvez pas éditer cet article","flash");
+
                 return $this->redirect(array('action' => 'my')); // on est redirigé sur l'action my
             }
         }
@@ -67,7 +65,12 @@ class PostsController extends AppController{
                 // on affiche un message flash en utilisant le templete flash
                 $this->Session->setFlash("L'image a bien été sauvegardée","flash");
                 // et on est redirigé vers
-                return $this->redirect(array('action'=>'my'));
+
+                // puis  on sera rediriger vers l'url de l'article en question
+                //debug($post['Post']['url']); die();
+
+                return $this->redirect($post['Post']['url']); // on est redirigé sur l'action my
+
             }
         }else if($id){
             $this->request->data = $post;

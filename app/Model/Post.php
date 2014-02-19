@@ -32,6 +32,8 @@ class Post extends AppModel{
 
 
     public function afterFind($results, $primary = false){
+
+        //debug($results);
         foreach($results as $k=>$result){
             if(isset($result[$this->alias]['id'])){
                 $results[$k][$this->alias]['photo'] = 'photos/' . ceil($result[$this->alias]['id']/1000) . '/' . $result[$this->alias]['id'] . '.jpg';
@@ -39,6 +41,7 @@ class Post extends AppModel{
                 // si on a une id de definit
                 $results[$k][$this->alias]['url'] = array('controller' => 'posts', 'action' => 'view', $result[$this->alias]['id']);
 
+               // debug($results[$k][$this->alias]['url']); die();
             }
         }
         return $results;
