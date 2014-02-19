@@ -6,7 +6,11 @@
 
     <!-- decommenter si on veut voir le resultat <?= debug($this->request->data); ?> -->
 
-
+    <?php if (isset($this->request->data['Post']['photo'])): ?>
+        <div class="span6">
+            <?= $this->Html->image($this->request->data['Post']['photo']); ?>
+        </div>
+    <?php endif ?>
 
     <div class="span6">
         <?= $this->Form->create('Post', array('type' => 'file')); ?>
