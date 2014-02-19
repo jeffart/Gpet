@@ -93,4 +93,23 @@ class PostsController extends AppController{
         $this->set(compact('pets'));  // on envoi  egalement la liste des animaux a la vue
     }
 
+
+//
+
+    public function view($id){ // prend en parametre l'id de la photo
+
+        // On a besoin des different animaux present sur la photo
+        $this->Post->contain('Pet');
+
+        // on recupere l'article
+        $post = $this->Post->findById($id);
+        //si je n'ai pas d'article je renvoi un not find exeption
+        if(empty($post)){
+            throw new NotFoundException();
+        }
+        // puis on envoie les données a la vue.
+        $this->set(compact('post'));
+    }
+
+
 }
