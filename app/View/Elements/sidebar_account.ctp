@@ -13,5 +13,9 @@
         <li<?php if($this->request->controller == 'pets'): ?> class="active"<?php endif; ?>>
             <?= $this->Html->link('Mes animaux', array('controller' => 'pets', 'action' => 'my')); ?>
         </li>
+
+        <li<?php if($this->request->controller == 'posts'): ?> class="active"<?php endif; ?>>
+            <?= $this->Html->link('Mes photos', array('controller' => 'posts', 'action' => 'my')); ?>
+        </li>
     </ul>
 </div>
