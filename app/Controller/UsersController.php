@@ -8,6 +8,15 @@ class UsersController extends AppController{
         $this->Auth->allow('signup','login','activate','forgot','password');
     }
 
+
+    public $paginate = array(
+        'PetsPost' => array(
+            'limit' => 9,
+            'order' => 'Post.created DESC',
+            'contain' => array('Post.id', 'Post.name', 'Post.content')
+        )
+    );
+
 // fonction de connxion à l'application
 
     public function login(){
@@ -51,10 +60,20 @@ class UsersController extends AppController{
                 'Comment.id' => 'desc'
             ),
         ));
+        $this->loadModel('Subscription');
+        $pet_id = $this->Subscription->find('list',array(
+            'fields'=>array('pet_id','pet_id'),
+            'user_id' =>array('user_id'=> $this->Auth->user('id'))
+        ));
+        //debug($pet_id); die();
+
+        $this->loadModel('PetsPost');
+        $posts = $this->paginate('PetsPost', array('pet_id' => $this->Session->read('Auth.Subscription')));
+
 
         //debug($comments); die();
         // les donées sont envoyées à la vue.
-        $this->set(compact('comments'));
+        $this->set(compact('comments','posts'));
     }
 
 
