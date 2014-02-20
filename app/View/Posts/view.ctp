@@ -17,7 +17,12 @@
 
     <div class="span8">
         <h2>Commentaires</h2>
+        <!--nocache-->
+        <?= $this->Form->create('Comment'); ?>
 
+        <?= $this->Form->input('content', array('label' => 'Votre message', 'type' => 'textarea')); ?>
+        <?= $this->Form->end('Ajouter'); ?>
+        <!--/nocache-->
     </div>
 
     <div class="span4">

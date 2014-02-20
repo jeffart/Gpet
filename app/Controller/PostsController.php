@@ -123,6 +123,26 @@ class PostsController extends AppController{
         if(empty($post)){
             throw new NotFoundException();
         }
+
+        if(!empty($this->request->data) && $this->Auth->user('id')){
+           // debug($this->request->data);
+            //sur les donneés qu'on va poste On va ajouter des informations
+            // le user_id de la table comment est egale à l'id de l'utilisateur logger
+            // et post_id de la table comment est egale l'id de l'article que l'on commente.
+            $this->request->data['Comment']['user_id'] = $this->Auth->user("id") ? $this->Auth->user("id") : 0;
+            $this->request->data['Comment']['post_id'] = $post['Post']['id'];
+
+            // avec le true on va focer la suppression de la clé primaire si elle exite.
+            $this->Post->Comment->create($this->request->data, true);
+            if($this->Post->Comment->save(null,true, array('user_id','post_id','content'))){
+                $this->Session->setFlash('Merci pour votre commentaire', 'flash', array('class' => 'success'));
+                $this->request->data = array(); //une fois la suavegarde effectuée penser a vider $this->request->data  pour supprimer le contenu du formulair de comment de la vue
+            }else{
+                $this->Session->setFlash('Impossible d\'envoyer votre commentaire', 'flash', array('class' => 'error'));
+
+            }
+        }
+
         // puis on envoie les données a la vue.
         $this->set(compact('post'));
     }
@@ -168,6 +188,8 @@ class PostsController extends AppController{
         $species = $species['Species']['name'];
         $this->set(compact('posts', 'species'));
     }
+
+
 
 
 }

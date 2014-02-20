@@ -2,7 +2,7 @@
 class Post extends AppModel{
 
     public $hasAndBelongsToMany = array('Pet'); // un article va avoir plusieurs animaux
-
+    public $hasMany = array('Comment'); // un article va avoir plusieur commentaires
   // regele de validation pour l'editon et la creation des post
     public $validate = array(
         'name' => 'notEmpty',
