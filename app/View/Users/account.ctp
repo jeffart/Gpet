@@ -1,24 +1,27 @@
 <div class="row">
     <div class="span8">
-        <h1>Mon compte</h1>
-        <p>&nbsp;</p>
-        <div class="row">
-            <div class="span2">
-                <!-- on verifie si l'utilisateur a un avatar -->
+        <h1>Mes abonnements</h1>
+    </div>
+    <div class="span4">
+        <h3>Derniers commentaires</h3>
 
-                <?php if ($this->Session->read('Auth.User.avatar')): ?>
-                    <!-- si ou on affiche l'avatar -->
-                    <?= $this->Html->image($this->Session->read('Auth.User.avatari') . '?' . rand()); ?>
-                <?php endif ?>
-            </div>
-            <div class="span6">
-                <?= $this->Form->create('User', array('type' => 'file')); ?>
-                    <?= $this->Form->input('avatarf', array('type' => 'file', 'label' => 'Avatar (au format jpg)')); ?>
-                    <?= $this->Form->input('username', array('label' => "Nom d'utilisateur", "disabled" => true, 'value' => $this->Session->read('Auth.User.username'))); ?>
-                    <?= $this->Form->input('firstname', array('label' => 'Prénom')); ?>
-                    <?= $this->Form->input('lastname', array('label' => 'Nom')); ?>
-                <?= $this->Form->end('Modifier'); ?></div>
+        <?php foreach ($comments as $k => $comment): ?>
+            <p><strong><?= h($comment['User']['username']); ?></strong>, <?= $this->Time->timeAgoInWords($comment['Comment']['created']); ?></p>
+            <p>
+                <?= nl2br(h($comment['Comment']['content'])); ?>
+            </p>
+            <p>
+                <em>sur <?= $this->Html->link($comment['Post']['name'], $comment['Post']['url']); ?></em>
+            </p>
+            <hr>
+        <?php endforeach ?>
+        <p>
+            <?= $this->Html->link('<i class="icon-inbox icon-white"></i> Voir tous les commentaires', array('action' => 'user', 'controller' => 'comments'), array('class' => 'btn btn-primary', 'escape' => false)); ?>
+
+        </p>
+
+        <div class="row">
+            <?= $this->element('sidebar_account'); ?>
         </div>
     </div>
-    <?= $this->element('sidebar_account'); ?>
 </div>

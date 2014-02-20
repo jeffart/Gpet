@@ -1,6 +1,8 @@
 <?php
 class User extends AppModel{
 
+    public $hasMany = array('Comment'); // un utilisateur a plusieurs comments.
+
     public $validate = array(
         'username' => array(
             'alpha' => array(

@@ -31,11 +31,34 @@ class UsersController extends AppController{
         return $this->redirect('/'); // rediriger l'user vers la page d'accueil.
     }
 
+    public function account(){
+        // on va liste les commentaire
+        //avant tout ne pas oublier de faire la liaison entre les user et les commentaire dans le model user
+        //un utilisateur a plusieurs comments.
+        // les condition: 1- on n'est pas l'auteur 2- l'article doit nous appartenir
+        // vue que l'on recupere des infos sur le model post et le user  ne pas oublier de faire le  join
+        // et cela grace au (contain) contain'   => array('Post','User').
+        // on precise les champs qu'on veut.
+        $comments = $this->User->Comment->find('all', array(
+            'conditions' => array(
+                'Comment.user_id <>' => $this->Auth->user('id'),
+                'Post.user_id' => $this->Auth->user('id')
+            ),
+            'contain'   => array('Post','User'),
+            'fields'    => array('Comment.content','Comment.id','Comment.created','User.username','Post.name','Post.id','Comment.username'),
+            'limit'     => 4
+        ));
+
+        //debug($comments); die();
+        // les donées sont envoyées à la vue.
+        $this->set(compact('comments'));
+    }
+
 
  // fonction de connexion au compte .
  // pas besoin de la metre dans le this auth allow car la page est limité al'acces des membres.
 
-    public function account(){
+    public function edit(){
         if (!empty($this->request->data)) {  // si des données sont postées
             $this->request->data['User']['id'] = $this->Auth->user('id'); // empeche les utilisateur de creer un faux champs id
             $this->User->create($this->request->data); // on enregistre les données
