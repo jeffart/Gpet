@@ -23,12 +23,24 @@
 
             <?php else: ?>
 
-                <!--on creer le bouton de souscription  action (souscribe)  contoller Pet  et on lui passe en parametre id de l'animal-->
-                <?= $this->Html->link(
-                    '<i class="icon-ok icon-white"></i> S\'abonner',
-                    array('action' => 'subscribe', 'controller' => 'pets', $pet['Pet']['id']),
-                    array('escape' => false, 'class' => 'btn btn-success')
-                ); ?>
+                <!--on creer le bouton de desabonnement et de  souscription  action (unsubscribe et souscribe)  contoller Pet  et on lui passe en parametre id de l'animal-->
+
+                <!-- si on retrouve l'id de l'animal dans le tableau de souscription contenu dans les données de session on affiche le bouton se desabonner-->
+
+                <?php if(in_array($pet['Pet']['id'], $this->Session->read('Auth.Subscription'))): ?>
+                    <?= $this->Html->link(
+                        '<i class="icon-remove icon-white"></i> Se désabonner',
+                        array('action' => 'unsubscribe', 'controller' => 'pets', $pet['Pet']['id']),
+                        array('escape' => false, 'class' => 'btn btn-warning')
+                    ); ?>
+                <?php else: ?>   <!-- si on ne retrouve l'id de l'animal dans le tableau de souscription contenu dans les données de session on affiche le bouton se Subscription-->
+
+                    <?= $this->Html->link(
+                        '<i class="icon-ok icon-white"></i> S\'abonner',
+                        array('action' => 'subscribe', 'controller' => 'pets', $pet['Pet']['id']),
+                        array('escape' => false, 'class' => 'btn btn-success')
+                    ); ?>
+                <?php endif; ?>
 
 
             <?php endif ?>

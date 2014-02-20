@@ -37,6 +37,7 @@ class UsersController extends AppController{
 
     public function logout(){
         $this->Auth->logout();
+        $this->Session->destroy();
         return $this->redirect('/'); // rediriger l'user vers la page d'accueil.
     }
 
@@ -60,11 +61,8 @@ class UsersController extends AppController{
                 'Comment.id' => 'desc'
             ),
         ));
-        $this->loadModel('Subscription');
-        $pet_id = $this->Subscription->find('list',array(
-            'fields'=>array('pet_id','pet_id'),
-            'user_id' =>array('user_id'=> $this->Auth->user('id'))
-        ));
+
+
         //debug($pet_id); die();
 
         $this->loadModel('PetsPost');

@@ -53,6 +53,25 @@ class AppController extends Controller {
             }
         }
 
+       // debug($this->Session->read());
+        //die();
+
+        // si on arrive pas avoir la liste des annimaux auquel on est abonnée alors qu'on est connecté
+        if($this->Session->read('Auth.User.id') && !$this->Session->read('Auth.Subscription')){
+            $this->loadModel('Subscription');  // on charge le model subscription
+            //On recupere la liste des abonements pour l'utilisateur
+            $subscriptions = $this->Subscription->find('list', array(
+                'fields' => array('pet_id','pet_id'),
+                'conditions' => array('user_id' => $this->Auth->user('id')
+                )));
+            // On va créer cette liste ici
+            $this->Session->write('Auth.Subscription', $subscriptions);
+
+
+        }
+
+        //debug($this->Session->read());die();
+
     }
 
 

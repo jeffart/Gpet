@@ -97,11 +97,30 @@ class PetsController extends AppController{
             $this->Session->setFlash("Vous êtes déjà abonné à cet animal","flash", array('class' => 'error'));
         }else{ // si l'utilisateur n'est pas abonné
             $this->Subscription->save($conditions); // on enregistre les donnée
-            $this->Session->write("Auth.Subscription.$pet_id", $pet_id);
+            $this->Session->write("Auth.Subscription.$pet_id", $pet_id); // on ecrit l'id de l'animal dans "Auth.Subscription.$pet_id"
             $this->Session->setFlash("Merci pour votre abonnement","flash", array('class' => 'success'));
         }
         return $this->redirect($this->referer()); // on redirige l'utilisateur vers la page d'ou il vient
     }
+// la fonction de desabonnement a un animal
+// elle va supprimer dans la table subscription l'id de l'utilisateur et l'id de l'animal auquel on souhaite se desabonner.
 
+
+    public function unsubscribe($pet_id){
+        $this->Pet->id = $pet_id;
+        if(!$this->Pet->exists()){
+            throw new NotFoundException();
+        }
+        $conditions = array(
+            'Subscription.pet_id' => $pet_id,
+            'Subscription.user_id'=> $this->Auth->user("id")
+        );
+        $this->Session->delete("Auth.Subscription.$pet_id"); // on supprime l'id de l'animal de "Auth.Subscription.$pet_id"
+        $this->loadModel('Subscription');
+        $count = $this->Subscription->deleteAll($conditions);
+        $this->Subscription->save($conditions);
+        $this->Session->setFlash("Merci pour votre désabonnement","flash", array('class' => 'success'));
+        return $this->redirect($this->referer());
+    }
 
 }
