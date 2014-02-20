@@ -130,7 +130,7 @@ class PostsController extends AppController{
 
 
 
-        if(!empty($this->request->data) && $this->Auth->user('id')){
+        if(!empty($this->request->data)){
            // debug($this->request->data);
             //sur les donneés qu'on va poste On va ajouter des informations
             // le user_id de la table comment est egale à l'id de l'utilisateur logger
@@ -140,9 +140,21 @@ class PostsController extends AppController{
 
             // avec le true on va focer la suppression de la clé primaire si elle exite.
             $this->Post->Comment->create($this->request->data, true);
-            if($this->Post->Comment->save(null,true, array('user_id','post_id','content'))){
+            $fields = array('user_id', 'post_id', 'content');
+
+            // si on est pas logger on deux champs supplementaire qui s'affiche
+            if(!$this->Auth->user("id")){
+                $fields[] = 'username';   // un pour le pseudo
+                $fields[] = 'mail';       // un pour le mail
+            }
+            //debug($this->request->data);die();
+            if($this->Post->Comment->save(null,true,$fields)){
                 $this->Session->setFlash('Merci pour votre commentaire', 'flash', array('class' => 'success'));
+
+
                 $this->request->data = array(); //une fois la suavegarde effectuée penser a vider $this->request->data  pour supprimer le contenu du formulair de comment de la vue
+
+
             }else{
                 $this->Session->setFlash('Impossible d\'envoyer votre commentaire', 'flash', array('class' => 'error'));
 
@@ -155,7 +167,7 @@ class PostsController extends AppController{
             ),
             'conditions' => array('Comment.post_id' => $post['Post']['id']),
             'contain'    => array('User'),
-            'fields'     => array('Comment.id', 'Comment.user_id', 'Comment.content','Comment.created','User.username','User.avatar','User.id')
+            'fields'     => array('Comment.id', 'Comment.user_id', 'Comment.content','Comment.created','User.username','User.avatar','User.id','Comment.username','Comment.mail')
         ));
         //debug($comments);
         // puis on envoie les données a la vue.

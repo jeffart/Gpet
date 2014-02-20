@@ -52,10 +52,14 @@
 
 
         <?= $this->Form->create('Comment'); ?>
-        <?php if ($this->Session->read('Auth.User.id')): ?>
+        <?php if (!$this->Session->read('Auth.User.id')): ?>
+            <?= $this->Form->input('username', array('label' => 'Votre pseudo')); ?>
+            <?= $this->Form->input('mail', array('label' => 'Votre email')); ?>
+
+        <?php endif ?>
         <?= $this->Form->input('content', array('label' => 'Votre message', 'type' => 'textarea')); ?>
         <?= $this->Form->end('Ajouter'); ?>
-        <?php endif ?>
+
         <!--/nocache-->
     </div>
 
