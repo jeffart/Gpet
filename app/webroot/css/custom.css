@@ -1,0 +1,22 @@
+a.pet {
+  color: gray;
+  padding: 20px 0;
+  border-bottom: 1px solid #cccccc;
+  display: block;
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  a.pet img {
+    float: left;
+    width: 50px;
+    vertical-align: middle;
+    margin: 0 15px; }
+  a.pet p {
+    margin-bottom: 0; }
+  a.pet:hover {
+    text-decoration: none;
+    background-color: #007FFF;
+    color: #FFF; }

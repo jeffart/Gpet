@@ -10,6 +10,7 @@
 
     <!-- Le styles -->
     <?= $this->Html->css('bootstrap'); ?>
+      <?= $this->Html->css('custom'); ?>
     <style type="text/css">
       body {
         padding-top: 60px;

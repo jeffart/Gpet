@@ -23,91 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
+      <file leaf-file-name="default.ctp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="48" selection-start="440" selection-end="440" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="3026">
+            <state line="12" column="40" selection-start="371" selection-end="371" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1785">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
+      <file leaf-file-name="custom.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/webroot/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="477" selection-end="477" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="901">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pet.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Posts/pet.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="32" selection-start="33" selection-end="33" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="578">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Posts/index.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="340">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Post.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="17" selection-start="1713" selection-end="1713" vertical-scroll-proportion="-1.3846154" vertical-offset="695" max-vertical-offset="1972">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PagesController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/PagesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="32" selection-start="182" selection-end="182" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="1343">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="species.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Posts/species.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="20" selection-start="72" selection-end="72" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Config/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="2" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.54468805" vertical-offset="0" max-vertical-offset="629">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ctp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Pages/index.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="35" selection-start="901" selection-end="901" vertical-scroll-proportion="-9.807693" vertical-offset="204" max-vertical-offset="952">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Species.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Species.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="14" selection-start="431" selection-end="431" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="476">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
               <folding />
             </state>
           </provider>
@@ -139,7 +67,6 @@
         <option value="$PROJECT_DIR$/app/Model/Pet.php" />
         <option value="$PROJECT_DIR$/app/View/Users/account.ctp" />
         <option value="$PROJECT_DIR$/app/Config/database.php" />
-        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
         <option value="$PROJECT_DIR$/app/Model/User.php" />
         <option value="$PROJECT_DIR$/app/Model/AppModel.php" />
         <option value="$PROJECT_DIR$/app/View/Elements/sidebar_account.ctp" />
@@ -153,6 +80,7 @@
         <option value="$PROJECT_DIR$/app/View/Posts/pet.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
         <option value="$PROJECT_DIR$/app/Config/routes.php" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
       </list>
     </option>
   </component>
@@ -524,10 +452,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Ampps\www\Gpet\app\webroot\css" />
       <recent name="C:\Ampps\www\Gpet\app\View\Posts" />
       <recent name="C:\Ampps\www\Gpet\app\View\Pages" />
       <recent name="C:\Ampps\www\Gpet\app\Model" />
-      <recent name="C:\Ampps\www\Gpet\app\webroot\css" />
       <recent name="C:\Ampps\www\Gpet\app\webroot\js" />
     </key>
   </component>
@@ -829,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="35" selection-start="3671" selection-end="3674" vertical-scroll-proportion="-8.5" vertical-offset="1122" max-vertical-offset="1768">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Posts/edit.ctp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="405" selection-end="405" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="646">
@@ -880,14 +801,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Species.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="431" selection-end="431" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="476">
+        <state line="8" column="14" selection-start="431" selection-end="431" vertical-scroll-proportion="0.22628951" vertical-offset="0" max-vertical-offset="601">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Pages/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="35" selection-start="901" selection-end="901" vertical-scroll-proportion="-9.807693" vertical-offset="204" max-vertical-offset="952">
+        <state line="27" column="35" selection-start="901" selection-end="901" vertical-scroll-proportion="0.42429283" vertical-offset="204" max-vertical-offset="952">
           <folding />
         </state>
       </provider>
@@ -929,7 +850,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="2" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.54468805" vertical-offset="0" max-vertical-offset="629">
+        <state line="40" column="2" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.5260586" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="40" selection-start="371" selection-end="371" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
           <folding />
         </state>
       </provider>
