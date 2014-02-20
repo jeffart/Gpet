@@ -11,7 +11,7 @@ class PostsController extends AppController{
 
     public function beforeFilter(){
         parent::beforeFilter();
-        $this->Auth->allow('pet');
+        $this->Auth->allow('pet','species','view');
     }
 
 
@@ -151,6 +151,22 @@ class PostsController extends AppController{
         $this->Post->delete($post['Post']['id']);
         // et on redirige vers la page d'accueil.
         return $this->redirect('/');
+    }
+
+    public function species($slug){
+        $this->loadModel('Species'); // on charge le model species
+        $species = $this->Species->findBySlug($slug); // on recupere l'espere qui correspond au slug
+        if (empty($species)) {   // si elle n'existe pas
+            throw new NotFoundException(); // non trouver
+        }
+        // si on a une espece
+        $this->loadModel('PetsPost');   // on attaque al table de liaison
+        $this->paginate['PetsPost']['contain'] = array('Pet','Post'); // on fait donc une pagination sur toutes les infos concernant l'animal et l'article.
+        // cette va nous permetre d'eviter d'afficher doublement les images au cas ou elle appartiendrai a deux  animo
+        $this->paginate['PetsPost']['group'] = 'Post.id';
+        $posts = $this->paginate('PetsPost', array('Pet.species_id' => $species['Species']['id']));
+        $species = $species['Species']['name'];
+        $this->set(compact('posts', 'species'));
     }
 
 

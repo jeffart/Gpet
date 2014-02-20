@@ -1,5 +1,5 @@
 
-
+<?php $this->extend('index'); ?>
 <div class="row">
     <p>&nbsp;</p>
     <?php if (isset($pet['Pet']['avatari'])): ?>
@@ -26,20 +26,3 @@
     </div>
     </div>
 
-<div class="row">
-    <?php foreach($posts as $k => $post):?>
-
-        <div class ="span4">
-            <a href="<?= $this->Html->url($post['Post']['url']); ?>">
-            <h3><?= h($post['Post']['name']); ?></h3>
-            <?=  $this->Html->image($post['Post']['thumb']) ;?>
-            <p><?= nl2br(h($post['Post']['content'])); ?></p>
-            </a>
-        </div>
-
-    <?php endforeach ?>
-<div class="span12">
-    <?= $this->Paginator->numbers(); ?>
-</div>
-
-</div>

@@ -9,6 +9,11 @@ class PagesController extends AppController {
 
 
 	public $uses = array();
+// on autorise la page d'accueil
+    public function beforeFilter(){
+        parent::beforeFilter();
+        $this->Auth->allow('index');
+    }
 
 
 	public function display() {
