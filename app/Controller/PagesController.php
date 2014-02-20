@@ -1,56 +1,16 @@
 <?php
-/**
- * Static content controller.
- *
- * This file will render views from views/pages/
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.Controller
- * @since         CakePHP(tm) v 0.2.9
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
+
 App::uses('AppController', 'Controller');
 
-/**
- * Static content controller
- *
- * Override this controller by placing a copy in controllers directory of an application
- *
- * @package       app.Controller
- * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
- */
 class PagesController extends AppController {
 
-/**
- * Controller name
- *
- * @var string
- */
+
 	public $name = 'Pages';
 
-/**
- * This controller does not use a model
- *
- * @var array
- */
+
 	public $uses = array();
 
-/**
- * Displays a view
- *
- * @param mixed What page to display
- * @return void
- */
+
 	public function display() {
 		$path = func_get_args();
 
@@ -73,6 +33,30 @@ class PagesController extends AppController {
 		$this->render(implode('/', $path));
 	}
 
+
+    public function index(){
+
+        // ici on recupere les 5 derniers animaux créer
+        $this->loadModel('Pet'); // on charge le model Pet
+        $pets = $this->Pet->find('all', array(
+            'order' => array('created DESC'),
+            'contain'=> array('Species.name'),
+            'limit' => 5
+        ));
+
+        // ici on recupere les 8 derniers articles créer
+        $this->loadModel('Post'); // on charge le Model Post
+        $posts = $this->Post->find('all', array(
+            'order' => array('created DESC'),
+            'limit'	=> 8
+        ));
+
+        // charger le model des especes
+        $this->loadModel('Species');
+        $species = $this->Species->find('all');
+
+        $this->set(compact('posts','pets','species')); // on passe les données a la vue
+    }
 
     // fonction pour le dashboard
 
