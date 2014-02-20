@@ -98,7 +98,7 @@ class PostsController extends AppController{
              //       )
         }
 
-        debug($this->request->data);
+       // debug($this->request->data);
         // on recupere les animaux sous forme de liste . en precision ce sont les animaux de l'utilisateur actuelement logger
         $pets = $this->Post->Pet->find('list', array(
             'conditions' => array('Pet.user_id' => $this->Auth->user('id'))
