@@ -70,5 +70,38 @@ class PetsController extends AppController{
         return $this->redirect(array('action' => 'my')); // on est rediriger vers l'action my
     }
 
+// la fonction de souscription a un animal
+// elle va rajouter dans la table subscription l'id de l'utilisateur et l'id de l'animal auquel on souhaite s'inscrire.
+    public function subscribe($pet_id){  // elle reçoit en parametre l'id de l'animal
+
+        $this->Pet->id = $pet_id;
+        if(!$this->Pet->exists()){
+            throw new NotFoundException();
+        }
+
+        // on met en place des condition
+        // l'id de l'animal est celui qui est passé en parametre
+        //l'id de l'utilisateur est celui de l'utilisateur actuelement  connecté.
+        $conditions = array(
+            'pet_id' => $pet_id,
+            'user_id'=> $this->Auth->user("id")
+        );
+        $this->loadModel('Subscription'); // on charge le model Subscription
+
+        // on verifi si un utilisateur est deja abonné à un animal grace au condition
+        $count = $this->Subscription->find('count', array(
+            'conditions' => $conditions
+        ));
+        if($count > 0){  // si l'utilisateur est abonné
+            // on ne fait pas la sauvegarde
+            $this->Session->setFlash("Vous êtes déjà abonné à cet animal","flash", array('class' => 'error'));
+        }else{ // si l'utilisateur n'est pas abonné
+            $this->Subscription->save($conditions); // on enregistre les donnée
+            $this->Session->write("Auth.Subscription.$pet_id", $pet_id);
+            $this->Session->setFlash("Merci pour votre abonnement","flash", array('class' => 'success'));
+        }
+        return $this->redirect($this->referer()); // on redirige l'utilisateur vers la page d'ou il vient
+    }
+
 
 }

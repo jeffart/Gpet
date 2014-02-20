@@ -20,6 +20,17 @@
 
             <?php if ($pet['Pet']['user_id'] == $this->Session->read('Auth.User.id')): ?>
                 , <?= $this->Html->link('Ajouter une photo', array('action' => 'edit', '?' => 'pet=' . $pet['Pet']['id'])); ?>
+
+            <?php else: ?>
+
+                <!--on creer le bouton de souscription  action (souscribe)  contoller Pet  et on lui passe en parametre id de l'animal-->
+                <?= $this->Html->link(
+                    '<i class="icon-ok icon-white"></i> S\'abonner',
+                    array('action' => 'subscribe', 'controller' => 'pets', $pet['Pet']['id']),
+                    array('escape' => false, 'class' => 'btn btn-success')
+                ); ?>
+
+
             <?php endif ?>
              <!--/nocache-->
         </p>
