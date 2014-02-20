@@ -131,8 +131,9 @@ class PostsController extends AppController{
 
 
         if(!empty($this->request->data)){
+            //
            // debug($this->request->data);
-            
+
             //sur les donneés qu'on va poste On va ajouter des informations
             // le user_id de la table comment est egale à l'id de l'utilisateur logger
             // et post_id de la table comment est egale l'id de l'article que l'on commente.

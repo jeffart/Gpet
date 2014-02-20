@@ -71,7 +71,7 @@
       <file leaf-file-name="PostsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="12" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.20344828" vertical-offset="613" max-vertical-offset="1768">
+            <state line="133" column="14" selection-start="5542" selection-end="5542" vertical-scroll-proportion="0.18067978" vertical-offset="613" max-vertical-offset="1785">
               <folding>
                 <element signature="n#beforeFilter#0;n#PostsController#0;n#!!top" expanded="false" />
                 <element signature="n#pet#0;n#PostsController#0;n#!!top" expanded="false" />
@@ -159,7 +159,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-18" />
     <option name="y" value="2" />
-    <option name="width" value="1250" />
+    <option name="width" value="794" />
     <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -596,7 +596,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-18" y="2" width="1250" height="768" extended-state="0" />
+    <frame x="-18" y="2" width="794" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -605,7 +605,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18548387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29336736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32882884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -979,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="12" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.20344828" vertical-offset="613" max-vertical-offset="1768">
+        <state line="133" column="14" selection-start="5542" selection-end="5542" vertical-scroll-proportion="0.18067978" vertical-offset="613" max-vertical-offset="1785">
           <folding>
             <element signature="n#beforeFilter#0;n#PostsController#0;n#!!top" expanded="false" />
             <element signature="n#pet#0;n#PostsController#0;n#!!top" expanded="false" />
