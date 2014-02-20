@@ -1,3 +1,7 @@
+<?php $this->set('title_for_layout', $post['Post']['name']); ?>
+<?php $this->Html->meta('description', $this->Text->truncate($post['Post']['content'], 200), array('inline' => false)); ?>
+
+
 <div class="row">
     <!-- pour voir les requetes sql sur la page <?= $this->element('sql_dump'); ?> -->
     <div class="span12">

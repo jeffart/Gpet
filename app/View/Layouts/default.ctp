@@ -3,10 +3,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+      <title><?= $title_for_layout; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+      <?= $this->fetch('meta'); ?>
 
     <!-- Le styles -->
     <?= $this->Html->css('bootstrap'); ?>

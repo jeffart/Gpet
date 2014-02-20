@@ -1,3 +1,7 @@
+<?php $this->set('title_for_layout', $pet['Pet']['name'] . ' | Photos de ' . $pet['Species']['name']); ?>
+<?php $this->Html->meta('description', 'Photo du ' . $pet['Species']['name'] . ' ' . $pet['Pet']['name'], array('inline' => false)); ?>
+
+
 
 <?php $this->extend('index'); ?>
 <div class="row">
