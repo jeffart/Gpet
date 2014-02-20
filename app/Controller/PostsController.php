@@ -132,9 +132,13 @@ class PostsController extends AppController{
 
         if(!empty($this->request->data)){
            // debug($this->request->data);
+            
             //sur les donneés qu'on va poste On va ajouter des informations
             // le user_id de la table comment est egale à l'id de l'utilisateur logger
             // et post_id de la table comment est egale l'id de l'article que l'on commente.
+
+            // $this->Auth->user("id") ? $this->Auth->user("id") : 0;
+            //si l'utilisateur est connecter sa retourne son id utilisateur sinon sa retourne 0
             $this->request->data['Comment']['user_id'] = $this->Auth->user("id") ? $this->Auth->user("id") : 0;
             $this->request->data['Comment']['post_id'] = $post['Post']['id'];
 

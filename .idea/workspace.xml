@@ -71,7 +71,7 @@
       <file leaf-file-name="PostsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="14" selection-start="6514" selection-end="6514" vertical-scroll-proportion="0.6431034" vertical-offset="613" max-vertical-offset="1700">
+            <state line="134" column="12" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.20344828" vertical-offset="613" max-vertical-offset="1768">
               <folding>
                 <element signature="n#beforeFilter#0;n#PostsController#0;n#!!top" expanded="false" />
                 <element signature="n#pet#0;n#PostsController#0;n#!!top" expanded="false" />
@@ -979,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="14" selection-start="6514" selection-end="6514" vertical-scroll-proportion="0.6431034" vertical-offset="613" max-vertical-offset="1700">
+        <state line="134" column="12" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.20344828" vertical-offset="613" max-vertical-offset="1768">
           <folding>
             <element signature="n#beforeFilter#0;n#PostsController#0;n#!!top" expanded="false" />
             <element signature="n#pet#0;n#PostsController#0;n#!!top" expanded="false" />
