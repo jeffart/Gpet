@@ -1,4 +1,5 @@
 <div class="row">
+    <!-- pour voir les requetes sql sur la page <?= $this->element('sql_dump'); ?> -->
     <div class="span12">
         <!--on affiche le titre-->
         <h1><?= h($post['Post']['name']); ?></h1>
@@ -17,7 +18,28 @@
 
     <div class="span8">
         <h2>Commentaires</h2>
+
+
+        <?php foreach ($comments as $k => $comment): ?>
+            <div class="row">
+                <div class="span2">
+                    <?php if ($comment['User']['avatar']): ?>
+                        <?= $this->Html->image($comment['User']['avatari'], array('class' => 'img-circle')); ?>
+                    <?php endif ?>
+                </div>
+                <div class="span6">
+                    <p><strong><?= h($comment['User']['username']); ?></strong>, <?= $this->Time->timeAgoInWords($comment['Comment']['created']); ?></p>
+                    <p>
+                        <?= nl2br(h($comment['Comment']['content'])); ?>
+                    </p>
+
+                </div>
+            </div>
+            <hr>
+        <?php endforeach ?>
+
         <!--nocache-->
+
         <?= $this->Form->create('Comment'); ?>
 
         <?= $this->Form->input('content', array('label' => 'Votre message', 'type' => 'textarea')); ?>

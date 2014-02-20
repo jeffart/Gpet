@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.ctp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="view.ctp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="22" selection-start="1015" selection-end="1015" vertical-scroll-proportion="-2.8461537" vertical-offset="249" max-vertical-offset="986">
+            <state line="30" column="112" selection-start="1570" selection-end="1584" vertical-scroll-proportion="0.47241378" vertical-offset="236" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
@@ -59,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostsController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PostsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="179" selection-start="6470" selection-end="6470" vertical-scroll-proportion="0.7137931" vertical-offset="300" max-vertical-offset="1156">
+            <state line="140" column="31" selection-start="6074" selection-end="6074" vertical-scroll-proportion="-2.8461537" vertical-offset="674" max-vertical-offset="1360">
               <folding>
                 <element signature="e#116#321#0" expanded="false" />
                 <element signature="n#beforeFilter#0;n#PostsController#0;n#!!top" expanded="false" />
@@ -121,10 +121,10 @@
         <option value="$PROJECT_DIR$/app/View/Posts/pet.ctp" />
         <option value="$PROJECT_DIR$/app/Config/routes.php" />
         <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
-        <option value="$PROJECT_DIR$/app/View/Posts/view.ctp" />
         <option value="$PROJECT_DIR$/app/Model/Post.php" />
         <option value="$PROJECT_DIR$/app/Model/Comment.php" />
         <option value="$PROJECT_DIR$/app/Controller/PostsController.php" />
+        <option value="$PROJECT_DIR$/app/View/Posts/view.ctp" />
       </list>
     </option>
   </component>
@@ -892,13 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="1015" selection-end="1015" vertical-scroll-proportion="-2.8461537" vertical-offset="249" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="84" selection-start="209" selection-end="209" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1972">
@@ -915,7 +908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="179" selection-start="6470" selection-end="6470" vertical-scroll-proportion="0.7137931" vertical-offset="300" max-vertical-offset="1156">
+        <state line="140" column="31" selection-start="6074" selection-end="6074" vertical-scroll-proportion="-2.8461537" vertical-offset="674" max-vertical-offset="1360">
           <folding>
             <element signature="e#116#321#0" expanded="false" />
             <element signature="n#beforeFilter#0;n#PostsController#0;n#!!top" expanded="false" />
@@ -924,6 +917,13 @@
             <element signature="n#delete#0;n#PostsController#0;n#!!top" expanded="false" />
             <element signature="n#species#0;n#PostsController#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Posts/view.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="112" selection-start="1570" selection-end="1584" vertical-scroll-proportion="0.47241378" vertical-offset="236" max-vertical-offset="1360">
+          <folding />
         </state>
       </provider>
     </entry>

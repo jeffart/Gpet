@@ -117,12 +117,18 @@ class PostsController extends AppController{
         // On a besoin des different animaux present sur la photo
         $this->Post->contain('Pet');
 
+       // $this->Post->contain('Comment','Comment.User.avatar','Comment.User.username');
+
         // on recupere l'article
         $post = $this->Post->findById($id);
-        //si je n'ai pas d'article je renvoi un not find exeption
+
+       // debug($post);
+        //si je n'ai pas d'article je renvoi un not findexeption
         if(empty($post)){
             throw new NotFoundException();
         }
+
+
 
         if(!empty($this->request->data) && $this->Auth->user('id')){
            // debug($this->request->data);
@@ -143,8 +149,14 @@ class PostsController extends AppController{
             }
         }
 
+        $comments = $this->Post->Comment->find('all', array(
+            'conditions' => array('Comment.post_id' => $post['Post']['id']),
+            'contain'    => array('User'),
+            'fields'     => array('Comment.id', 'Comment.user_id', 'Comment.content','Comment.created','User.username','User.avatar','User.id')
+        ));
+        //debug($comments);
         // puis on envoie les données a la vue.
-        $this->set(compact('post'));
+        $this->set(compact('post','comments'));
     }
 
 
