@@ -19,7 +19,7 @@
     <div class="span8">
         <h2>Commentaires</h2>
 
-
+        <!--nocache-->
         <?php foreach ($comments as $k => $comment): ?>
             <div class="row">
                 <div class="span2">
@@ -32,18 +32,30 @@
                     <p>
                         <?= nl2br(h($comment['Comment']['content'])); ?>
                     </p>
+                    <!-- si l'id de l'utilisateur est egale au user_id du comment on peut affiche le bouton de suppression du commenetaire-->
+                    <?php if (
+
+                    $this->Session->read('Auth.User.id') == $comment['Comment']['user_id'] ||
+                    $this->Session->read('Auth.User.id') == $post['Post']['user_id'] ||
+                    $this->Session->read('Auth.User.role') == 'admin'
+                    ): ?>
+                    <p>
+                        <?= $this->Form->postLink('<i class="icon-trash icon-white"></i> Supprimer ce commentaire', array('action' => 'delete', 'controller' => 'comments', $comment['Comment']['id']), array('class' => 'btn btn-danger', 'escape' => false), 'Voulez vous vraiment supprimer ?'); ?>
+                    </p>
+                    <?php endif ?>
 
                 </div>
             </div>
             <hr>
         <?php endforeach ?>
 
-        <!--nocache-->
+
 
         <?= $this->Form->create('Comment'); ?>
-
+        <?php if ($this->Session->read('Auth.User.id')): ?>
         <?= $this->Form->input('content', array('label' => 'Votre message', 'type' => 'textarea')); ?>
         <?= $this->Form->end('Ajouter'); ?>
+        <?php endif ?>
         <!--/nocache-->
     </div>
 

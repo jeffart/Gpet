@@ -15,6 +15,8 @@ class UsersController extends AppController{
 
             if ($this->Auth->login()) {  // si on arrive à connecter l'utilisateur message de succes
                 $this->Session->setFlash("Vous êtes maintenant connecté","flash", array('class' => 'success'));
+                // une fois connecter l'utilisateur est rediriger vers la page sur laquelle il etait
+                $this->redirect($this->referer());
             }else{  // sinon message identifiant pas correct
                 $this->Session->setFlash("Identifiants incorrects","flash", array('class' => 'error'));
             }
