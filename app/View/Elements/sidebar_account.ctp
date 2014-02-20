@@ -19,6 +19,10 @@
             <?= $this->Html->link('Mes animaux', array('controller' => 'pets', 'action' => 'my')); ?>
         </li>
 
+        <li<?php if($this->request->controller == 'comments'): ?> class="active"<?php endif; ?>>
+            <?= $this->Html->link('Commentaires', array('controller' => 'comments', 'action' => 'user')); ?>
+        </li>
+
         <li<?php if($this->request->action == 'edit'): ?> class="active"<?php endif; ?>>
             <?= $this->Html->link('Mon profil', array('controller' => 'users', 'action' => 'edit')); ?>
         </li>

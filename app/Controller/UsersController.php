@@ -46,7 +46,10 @@ class UsersController extends AppController{
             ),
             'contain'   => array('Post','User'),
             'fields'    => array('Comment.content','Comment.id','Comment.created','User.username','Post.name','Post.id','Comment.username'),
-            'limit'     => 4
+            'limit'     => 4,
+            'order' => array(
+                'Comment.id' => 'desc'
+            ),
         ));
 
         //debug($comments); die();

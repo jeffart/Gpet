@@ -4,6 +4,17 @@ class CommentsController extends AppController{
 
 
 
+    // creation d'une variable de pagination pour recuperer les comments dans la fonction user
+
+    public $paginate = array(
+        'contain'    => array('User','Post'),
+        'fields'     => array('Comment.id', 'Comment.user_id', 'Comment.content','Comment.created','User.username','User.avatar','User.id','Post.name','Post.id','Comment.username','Comment.mail'),
+        'limit'      =>3,
+        'order' => array(
+            'Comment.id' => 'desc'
+        ),
+    );
+
     public function delete($id){
         // si cette action est appelé d'une manière autre que post
         if(!$this->request->is('post')){
@@ -33,6 +44,15 @@ class CommentsController extends AppController{
         return $this->redirect($this->referer());
     }
 
+    // cette fonction va nous permetre de lister les commentaire
+    public function user(){
+
+        $comments = $this->paginate('Comment', array('Post.user_id' => $this->Auth->user("id")));
+        //debug($comments);
+
+        $this->set(compact('comments'));
+
+    }
 
 
 }

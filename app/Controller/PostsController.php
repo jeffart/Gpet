@@ -150,6 +150,9 @@ class PostsController extends AppController{
         }
 
         $comments = $this->Post->Comment->find('all', array(
+            'order' => array(
+                'Comment.id' => 'desc'
+            ),
             'conditions' => array('Comment.post_id' => $post['Post']['id']),
             'contain'    => array('User'),
             'fields'     => array('Comment.id', 'Comment.user_id', 'Comment.content','Comment.created','User.username','User.avatar','User.id')
